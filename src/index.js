@@ -10,6 +10,6 @@ registerServiceWorker();
 
 getTopGames().then(games => {
   console.log(games);
-  getGameStreams(games.top[0].game.name)
+  getGameStreams(games[0].game.name)
       .then(stream => console.log(stream))
 })

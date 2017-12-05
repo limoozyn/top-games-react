@@ -5,8 +5,12 @@ const twitch = new Twitch({
 });
 
 function getTopGames () {
-  return twitch.getTopGames()
-}
+  return new Promise((resolve, reject) => {
+    twitch.getTopGames()
+        .then(data=> {
+          resolve((data.top));
+        }).catch(reject);
+})}
 
 function getGameStreams (game) {
   return twitch.getTopStreams(game)
