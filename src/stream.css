@@ -1,4 +1,23 @@
-.streams-list__stream{
+.stream{
   box-sizing: border-box;
-  border: 1px solid yellow;
+}
+.stream-details{
+  margin: 10px;
+}
+.stream-details__logo{
+  width: 50px;
+  height: auto;
+}
+.stream-details__title{
+  font: 14px 'Source Sans Pro', sans-serif;
+  color: gray;
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50px;
+}
+.stream-details__viewers-count{
+  font: 12px 'Source Sans Pro', sans-serif;
+  color: gray;
 }

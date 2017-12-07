@@ -6,16 +6,18 @@ import Stream from './stream';
 
 class Sheet extends React.Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       games: [],
-      streams: []
+      streams: [],
+      active_id: null
     }
   }
 
-  onGameClick (name) {
-    getGameStreams(name).then(streams => {
+  onGameClick (game) {
+    getGameStreams(game.name).then(streams => {
       this.setState({streams});
+      this.setState({active_id: game._id});
     })
   }
 
@@ -31,7 +33,9 @@ class Sheet extends React.Component {
           <aside className="games">
             <ul className="games-list">
               {this.state.games.map(game =>
-                  <li key={game.game._id}><Game value={game} onClick={() => this.onGameClick (game.game.name)}/></li>
+                <li className={"game-item " + (this.state.active_id === game.game._id ? 'active' : '')} key={game.game._id}>
+                  <Game value={game} onClick={() => this.onGameClick (game.game)}/>
+                </li>
               )}
             </ul>
           </aside>

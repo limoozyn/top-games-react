@@ -1,4 +1,32 @@
-.games-list__game{
+.game{
+  cursor: pointer;
   box-sizing: border-box;
-  border: 1px solid red;
+}
+.game-item.active{
+  background: white;
+}
+.game-details{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.game-details__picture{
+  width: 50px;
+  height: auto;
+}
+.game-details__title{
+  padding-left: 10px;
+  font: 16px 'Source Sans Pro', sans-serif;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70px;
+}
+.game__viewers-count{
+  font: 12px 'Source Sans Pro', sans-serif;
+  color: white;
+}
+.game-item.active .game-details__title,
+.game-item.active .game__viewers-count{
+  color: gray;
 }
