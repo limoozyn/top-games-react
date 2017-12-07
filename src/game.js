@@ -1,9 +1,10 @@
 import React from 'react'
+import './game.css'
 
 function Game (props) {
     return (
-        <article className="game" onClick={props.onClick}>
-            //content
+        <article className="games-list__game" onClick={props.onClick}>
+            Game content
         </article>
     )
 }

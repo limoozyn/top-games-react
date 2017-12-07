@@ -1,0 +1,16 @@
+.sheet{
+  border: 1px solid blue;
+  display: flex;
+}
+.games{
+  width: 20%;
+}
+.streams{
+  width: 80%;
+}
+.games-list{
+  list-style: none;
+}
+.streams-list{
+  list-style: none;
+}

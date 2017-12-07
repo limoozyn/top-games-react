@@ -1,9 +1,10 @@
 import React from 'react'
+import './stream.css'
 
 function Stream (props) {
     return (
-        <article className="stream">
-            //content
+        <article className="streams-list__stream">
+            Stream content
         </article>
     )
 }
