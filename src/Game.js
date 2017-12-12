@@ -3,7 +3,7 @@ import './Game.css'
 
 function Game (props) {
     return (
-        <a className="game-link" href='#' onClick={props.onGameClick}>
+        <button className="game-button" onClick={props.onGameClick}>
           <article className="game">
             <figure className="game-details">
               <img className="game-details__picture" src={props.game.box.small} alt={props.game.name}/>
@@ -13,7 +13,7 @@ function Game (props) {
             </figure>
             <p className="game__viewers-count">Viewers: {props.viewers}</p>
           </article>
-        </a>
+        </button>
 
     )
 }

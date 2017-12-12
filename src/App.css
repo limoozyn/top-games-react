@@ -5,13 +5,14 @@
   display: flex;
 }
 .games{
-  width: 20%;
+  flex: 1;
   background-color: #cfcfcf;
 }
+main{
+  flex: 4;
+}
 .streams{
-  width: 80%;
   position: fixed;
-  left: 20%;
 }
 .games-list{
   list-style: none;

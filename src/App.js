@@ -43,12 +43,14 @@ class Sheet extends React.Component {
               )}
             </ul>
           </aside>
-          <main className="streams">
-            <ul className="streams-list">
-              {this.state.streams.map(stream =>
-                  <li key={stream._id}><Stream value={stream}/></li>
-              )}
-            </ul>
+          <main>
+            <div className="streams" >
+              <ul className="streams-list">
+                {this.state.streams.map(stream =>
+                    <li key={stream._id}><Stream value={stream}/></li>
+                )}
+              </ul>
+            </div>
           </main>
         </div>
     )
