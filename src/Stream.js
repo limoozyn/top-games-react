@@ -1,5 +1,5 @@
 import React from 'react'
-import './stream.css'
+import './Stream.css'
 
 function Stream (props) {
   return (
