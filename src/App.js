@@ -1,8 +1,9 @@
 import React from "react";
-import './sheet.css'
+import './App.css'
 import { getTopGames, getGameStreams } from './api';
-import Game from './game';
-import Stream from './stream';
+import Game from './Game';
+import Stream from './Stream';
+import classNames from "classnames";
 
 class Sheet extends React.Component {
   constructor (props) {
@@ -15,9 +16,9 @@ class Sheet extends React.Component {
   }
 
   onGameClick (game) {
+    this.setState({active_id: game._id});
     getGameStreams(game.name).then(streams => {
       this.setState({streams});
-      this.setState({active_id: game._id});
     })
   }
 
@@ -33,8 +34,11 @@ class Sheet extends React.Component {
           <aside className="games">
             <ul className="games-list">
               {this.state.games.map(game =>
-                <li className={"game-item " + (this.state.active_id === game.game._id ? 'active' : '')} key={game.game._id}>
-                  <Game value={game} onClick={() => this.onGameClick (game.game)}/>
+                <li className = { classNames( 'game-item',
+                                            { 'game-item_active' : ( this.state.active_id === game.game._id) }
+                                          )}
+                              key = { game.game._id }>
+                  <Game game={game.game} viewers={game.viewers} onGameClick={() => this.onGameClick (game.game)}/>
                 </li>
               )}
             </ul>
