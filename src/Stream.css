@@ -1,11 +1,11 @@
-.stream-details{
+.stream__details{
   margin: 10px;
 }
-.stream-details__logo{
+.stream__logo{
   width: 50px;
   height: auto;
 }
-.stream-details__title{
+.stream__title{
   font: 14px 'Source Sans Pro', sans-serif;
   color: gray;
   margin: 5px 0;
@@ -14,7 +14,7 @@
   text-overflow: ellipsis;
   max-width: 50px;
 }
-.stream-details__viewers-count{
+.stream__viewers-count{
   font: 12px 'Source Sans Pro', sans-serif;
   color: gray;
 }

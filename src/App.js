@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import './App.css'
 import { getTopGames, getGameStreams } from './api';
 import Game from './Game';
 import Stream from './Stream';
-import classNames from "classnames";
+import classNames from 'classnames';
 
-class Sheet extends React.Component {
+class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -15,7 +15,8 @@ class Sheet extends React.Component {
     }
   }
 
-  onGameClick (game) {
+  onGameClick (e, game) {
+    e.preventDefault();
     this.setState({active_id: game._id});
     getGameStreams(game.name).then(streams => {
       this.setState({streams});
@@ -30,16 +31,20 @@ class Sheet extends React.Component {
 
   render() {
     return (
-        <div className="sheet">
+        <div className="app">
           <aside className="games">
             <ul className="games-list">
               {this.state.games.map(game =>
-                <li className = { classNames( 'game-item',
-                                            { 'game-item_active' : ( this.state.active_id === game.game._id) }
-                                          )}
-                              key = { game.game._id }>
-                  <Game game={game.game} viewers={game.viewers} onGameClick={() => this.onGameClick (game.game)}/>
-                </li>
+                  <a href="" className="games-list__game-clickable"
+                     onClick={(e)=>this.onGameClick(e, game.game)}
+                     key = { game.game._id }>
+                    <li className = { classNames( "games-list__game-item",
+                                                { "games-list__game-item--active" : this.state.active_id === game.game._id }
+                                              )}>
+                        <Game game={game.game} viewers={game.viewers}/>
+                    </li>
+                  </a>
+
               )}
             </ul>
           </aside>
@@ -57,4 +62,4 @@ class Sheet extends React.Component {
   }
 }
 
-export default Sheet
+export default App

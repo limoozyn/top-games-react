@@ -1,25 +1,17 @@
-.game-clickable{
-  width: 100%;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-}
 .game{
   cursor: pointer;
+  padding: 2px;
 }
-.game-item_active{
-  background: white;
-}
-.game-details{
+.game__details{
   display: flex;
   flex-direction: row;
   margin: 0;
 }
-.game-details__picture{
+.game__picture{
   width: 50px;
   height: auto;
 }
-.game-details__title{
+.game__title{
   padding-left: 10px;
   font: 16px 'Source Sans Pro', sans-serif;
   color: white;
@@ -31,7 +23,7 @@
   font: 12px 'Source Sans Pro', sans-serif;
   color: white;
 }
-.game-item_active .game-details__title,
-.game-item_active .game__viewers-count{
+.games-list__game-item--active .game__title,
+.games-list__game-item--active .game__viewers-count{
   color: gray;
 }
