@@ -3,7 +3,7 @@ import './App.css'
 import { getTopGames, getGameStreams } from './api';
 import Game from './Game';
 import Stream from './Stream';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 class App extends React.Component {
   constructor (props) {
@@ -38,7 +38,7 @@ class App extends React.Component {
                   <a href="" className="games-list__game-clickable"
                      onClick={(e)=>this.onGameClick(e, game.game)}
                      key = { game.game._id }>
-                    <li className = { classNames( "games-list__game-item",
+                    <li className = { cx( "games-list__game-item",
                                                 { "games-list__game-item--active" : this.state.active_id === game.game._id }
                                               )}>
                         <Game game={game.game} viewers={game.viewers}/>
