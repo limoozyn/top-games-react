@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css'
 import { getTopGames, getGameStreams } from './api';
-import Game from './Game';
-import Stream from './Stream';
+import Entity from './Entity';
 import cx from 'classnames';
 
 class App extends React.Component {
@@ -41,7 +40,11 @@ class App extends React.Component {
                     <li className = { cx( "games-list__game-item",
                                                 { "games-list__game-item--active" : this.state.active_id === game.game._id }
                                               )}>
-                        <Game game={game.game} viewers={game.viewers}/>
+                      <Entity
+                        picture={game.game.box.small}
+                        title={game.game.name}
+                        viewers={game.game.viewers}
+                        entityName={'game'}/>
                     </li>
                   </a>
 
@@ -52,7 +55,13 @@ class App extends React.Component {
             <div className="streams" >
               <ul className="streams-list">
                 {this.state.streams.map(stream =>
-                    <li key={stream._id}><Stream value={stream}/></li>
+                  <li key={stream._id}>
+                    <Entity
+                      picture={stream.channel.logo}
+                      title={stream.channel.display_name}
+                      viewers={stream.viewers}
+                      entityName={'stream'}/>
+                  </li>
                 )}
               </ul>
             </div>

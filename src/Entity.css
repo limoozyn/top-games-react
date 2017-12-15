@@ -22,8 +22,29 @@
 .game__viewers-count{
   font: 12px 'Source Sans Pro', sans-serif;
   color: white;
+  padding-left: 10px;
 }
 .games-list__game-item--active .game__title,
 .games-list__game-item--active .game__viewers-count{
+  color: gray;
+}
+.stream__details{
+  margin: 10px;
+}
+.stream__picture{
+  width: 50px;
+  height: auto;
+}
+.stream__title{
+  font: 14px 'Source Sans Pro', sans-serif;
+  color: gray;
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50px;
+}
+.stream__viewers-count{
+  font: 12px 'Source Sans Pro', sans-serif;
   color: gray;
 }
