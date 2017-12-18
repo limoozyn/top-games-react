@@ -3,19 +3,17 @@
 }
 .app{
   display: flex;
-  position: fixed;
   width: 100%;
   height: 100%;
 }
 .games{
   flex: 1 1;
   background-color: #cfcfcf;
-  overflow-y: auto}
+  overflow-y: auto;
+  height: 100%;
+}
 .main{
   flex: 3 3;
-}
-.streams{
-  position: fixed;
 }
 .games-list{
   list-style: none;
