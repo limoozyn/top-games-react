@@ -28,10 +28,12 @@
 .games-list__game-item--active .game__viewers-count{
   color: gray;
 }
+.streams-list__streams-item{
+  margin: 10px;
+}
 .stream__details{
   display: flex;
   flex-direction: column;
-  margin: 10px;
 }
 .stream__picture{
   width: 50px;

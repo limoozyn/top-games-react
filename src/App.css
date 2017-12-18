@@ -8,13 +8,15 @@
   background-color: #cfcfcf;
   overflow-y: auto;
   height: 100%;
+  padding: 0 20px;
 }
 .main{
   flex: 3 3;
 }
 .games-list{
+  margin: 0;
+  padding: 0;
   list-style: none;
-  padding: 0 20px;
 }
 .games-list__game-clickable{
   width: 100%;
@@ -31,7 +33,6 @@
 .streams-list{
   list-style: none;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   padding: 0 20px;
 }

@@ -53,10 +53,10 @@ class App extends React.Component {
             </ul>
           </aside>
           <main className="main">
-            <div className="streams" >
+            <div className="streams">
               <ul className="streams-list">
                 {this.state.streams.map(stream =>
-                  <li key={stream._id}>
+                  <li key={stream._id} className = "streams-list__streams-item">
                     <Entity
                       picture={stream.channel.logo}
                       title={stream.channel.display_name}
