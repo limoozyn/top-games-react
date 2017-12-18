@@ -11,8 +11,8 @@
   flex: 1 1;
   background-color: #cfcfcf;
   overflow-y: auto}
-main{
-  flex: 3 1;
+.main{
+  flex: 3 3;
 }
 .streams{
   position: fixed;

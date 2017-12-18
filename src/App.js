@@ -52,7 +52,7 @@ class App extends React.Component {
               )}
             </ul>
           </aside>
-          <main>
+          <main className="main">
             <div className="streams" >
               <ul className="streams-list">
                 {this.state.streams.map(stream =>
