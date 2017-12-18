@@ -38,10 +38,10 @@ class App extends React.Component {
                                     { "games-list__game-item--active"
                                         : this.state.active_id === game.game._id
                                     }
-                                ) }>
+                                ) }
+                    key = { game.game._id }>
                   <a href="" className="games-list__game-clickable"
-                     onClick={(e)=>this.onGameClick(e, game.game)}
-                     key = { game.game._id }>
+                     onClick={(e)=>this.onGameClick(e, game.game)}>
                     <Entity
                       picture={game.game.box.small}
                       title={game.game.name}
