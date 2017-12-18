@@ -46,7 +46,7 @@ class App extends React.Component {
                       picture={game.game.box.small}
                       title={game.game.name}
                       viewers={game.game.viewers}
-                      name={'game'}/>
+                      name="game"/>
                   </a>
                 </li>
               )}
@@ -61,7 +61,7 @@ class App extends React.Component {
                       picture={stream.channel.logo}
                       title={stream.channel.display_name}
                       viewers={stream.viewers}
-                      name={'stream'}/>
+                      name="stream"/>
                   </li>
                 )}
               </ul>
