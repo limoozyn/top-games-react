@@ -24,8 +24,6 @@ main{
 .games-list__game-clickable{
   width: 100%;
   text-decoration: none;
-  background-color: transparent;
-  border: none;
 }
 .games-list__game-item:not(:last-child){
   border-bottom: 1px dashed white;

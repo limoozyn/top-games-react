@@ -34,20 +34,21 @@ class App extends React.Component {
           <aside className="games">
             <ul className="games-list">
               {this.state.games.map(game =>
+                <li className = { cx( "games-list__game-item",
+                                    { "games-list__game-item--active"
+                                        : this.state.active_id === game.game._id
+                                    }
+                                ) }>
                   <a href="" className="games-list__game-clickable"
                      onClick={(e)=>this.onGameClick(e, game.game)}
                      key = { game.game._id }>
-                    <li className = { cx( "games-list__game-item",
-                                                { "games-list__game-item--active" : this.state.active_id === game.game._id }
-                                              )}>
-                      <Entity
-                        picture={game.game.box.small}
-                        title={game.game.name}
-                        viewers={game.game.viewers}
-                        entityName={'game'}/>
-                    </li>
+                    <Entity
+                      picture={game.game.box.small}
+                      title={game.game.name}
+                      viewers={game.game.viewers}
+                      entityName={'game'}/>
                   </a>
-
+                </li>
               )}
             </ul>
           </aside>
