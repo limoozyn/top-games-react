@@ -45,7 +45,7 @@ class App extends React.Component {
                     <Entity
                       picture={game.game.box.small}
                       title={game.game.name}
-                      viewers={game.game.viewers}
+                      viewers={game.viewers}
                       name="game"/>
                   </a>
                 </li>
