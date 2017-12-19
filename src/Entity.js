@@ -7,8 +7,8 @@ function Entity (props) {
       <figure className={`${props.name}__details`}>
         <img className={`${props.name}__picture`} src={props.picture} alt={props.title}/>
         <figcaption>
-          <h3 className={`${props.name}__title`}>{props.title}</h3>
-          <p className={`${props.name}__viewers-count`}>Viewers: {props.viewers}</p>
+          <h3 className={`entity__title--${props.name} entity__title`}>{props.title}</h3>
+          <p className={`entity__viewers-count--${props.name} entity__viewers-count`}>Viewers: {props.viewers}</p>
         </figcaption>
       </figure>
     </article>
