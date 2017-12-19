@@ -58,7 +58,7 @@ class App extends React.Component {
                 {this.state.streams.map(stream =>
                   <li key={stream._id} className = "streams-list__streams-item">
                     <Entity
-                      picture={stream.channel.logo}
+                      picture={stream.preview.medium}
                       title={stream.channel.display_name}
                       viewers={stream.viewers}
                       name="stream"/>
