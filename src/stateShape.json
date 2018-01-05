@@ -1,0 +1,15 @@
+{
+  games: {
+    isFetching: false,
+    didInvalidate: false,
+    items: []
+  },
+  streamsByGame: {
+    id: null,
+    isFetching: false,
+    didInvalidate: false,
+    lastUp
+    items: []
+  },
+  activeGameId: null
+}
