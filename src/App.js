@@ -10,13 +10,13 @@ class App extends React.Component {
     this.state = {
       games: [],
       streams: [],
-      active_id: null
+      selectedGame: null
     }
   }
 
   onGameClick (e, game) {
     e.preventDefault();
-    this.setState({active_id: game._id});
+    this.setState({selectedGame: game.name});
     getGameStreams(game.name).then(streams => {
       this.setState({streams});
     })
@@ -36,7 +36,7 @@ class App extends React.Component {
               {this.state.games.map(game =>
                 <li className = { cx( "games-list__game-item",
                                     { "games-list__game-item--active"
-                                        : this.state.active_id === game.game._id
+                                        : this.state.selectedGame === game.game.name
                                     }
                                 ) }
                     key = { game.game._id }>

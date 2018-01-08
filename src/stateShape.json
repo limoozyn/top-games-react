@@ -5,11 +5,12 @@
     items: []
   },
   streamsByGame: {
-    id: null,
-    isFetching: false,
-    didInvalidate: false,
-    lastUp
-    items: []
+    gameName1: {
+      isFetching: false,
+      didInvalidate: false,
+      lastUpdated: null,
+      items: []
+    },
   },
-  activeGameId: null
+  selectedGame: null
 }

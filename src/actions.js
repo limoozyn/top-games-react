@@ -6,7 +6,7 @@ export const RECEIVE_STREAMS = 'RECEIVE_STREAMS'
 export function selectGame(game) {
   return {
     type: SELECT_GAME,
-    id: game._id
+    name: game.name
   }
 }
 
