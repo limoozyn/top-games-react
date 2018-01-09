@@ -4,25 +4,21 @@ import {
   INVALIDATE_GAME,
   REQUEST_STREAMS,
   RECEIVE_STREAMS
-} from '../actions'
+} from './actions'
 
 function selectedGame(state = null, action) {
   switch (action.type) {
     case SELECT_GAME:
-      return action.name
+      return Object.assign({},state, {
+        selectedGame: action.gameName
+      })
+      return action.gameName
     default:
       return state
   }
 }
 
-function streams(
-  state = {
-    isFetching: false,
-    didInvalidate: false,
-    items: []
-  },
-  action
-) {
+function streams( state = {},action) {
   switch (action.type) {
     case INVALIDATE_GAME:
       return Object.assign({},state, {
@@ -51,7 +47,7 @@ function streamsByGame(state = {}, action) {
     case RECEIVE_STREAMS:
     case REQUEST_STREAMS:
       return Object.assign({}, state, {
-        [action.name]: streams(state[action.name], action)
+        [action.gameName]: streams(state[action.gameName], action)
       })
     default:
       return state

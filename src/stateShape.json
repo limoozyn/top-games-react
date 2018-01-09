@@ -1,9 +1,4 @@
 {
-  games: {
-    isFetching: false,
-    didInvalidate: false,
-    items: []
-  },
   streamsByGame: {
     gameName1: {
       isFetching: false,

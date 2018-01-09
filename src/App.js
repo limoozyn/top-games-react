@@ -1,9 +1,32 @@
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
+import { clickOnGame } from './actions'
+import rootReducer from './reducers'
+//
 import React from 'react';
 import './App.css'
 import { getTopGames, getGameStreams } from './api';
 import Entity from './Entity';
 import cx from 'classnames';
 
+const loggerMiddleware = createLogger()
+
+const store = createStore(
+    rootReducer,
+    applyMiddleware(
+        thunkMiddleware,
+        loggerMiddleware
+    )
+)
+
+// store.dispatch(selectGame('DYE'))
+store
+    .dispatch(clickOnGame('DYE'))
+    // .dispatch(fetchStreamsIfNeeded('DYE'))
+    .then(() => {
+      console.log(store.getState())
+    })
 class App extends React.Component {
   constructor (props) {
     super(props);
