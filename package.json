@@ -6,6 +6,7 @@
     "classnames": "^2.2.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "redux": "^3.7.2",
     "twitch.tv-api": "^1.2.4"
   },
   "devDependencies": {
